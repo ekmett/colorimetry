@@ -27,29 +27,31 @@ source-repository head
 library
   build-depends:
     base                 >= 4 && < 5,
-    containers           >= 0.3.0.0 && < 0.5,
-    unordered-containers >= 0.1.4.6 && < 0.2,
-    vector               >= 0.9.1 && < 0.10,
+    containers           >= 0.3.0.0,
+    unordered-containers >= 0.1.4.6,
+    vector               >= 0.9.1,
     ghc-prim
 
   exposed-modules:
-    Data.Colorimetry.Illuminant
-    Data.Colorimetry.Illuminant.BlackBody
-    Data.Colorimetry.Illuminant.Standard
-    Data.Colorimetry.Illuminant.NonStandard
-    Data.Colorimetry.Monitor
-    Data.Colorimetry.Observer
-    Data.Colorimetry.Observer.TwoDegree.CIE_1931
-    Data.Colorimetry.Observer.TwoDegree.JuddVos_1978
-    Data.Colorimetry.Observer.TenDegree.CIE_1964
-    Data.Colorimetry.Observer.TenDegree.StockmanSharpe_2000
-    Data.Colorimetry.Observer.TenDegree.StockmanJäglePirzerSharpe_2008
-    Data.Colorimetry.Spectrum.Class
-    Data.Colorimetry.Spectrum.RGB
-    Data.Colorimetry.Spectrum.XYZ
-    Data.Photometry.Photopic
-    Data.Photometry.Scotopic
+    Colorimetry.Illuminant.BlackBody
 
+
+--    Colorimetry.Illuminant
+--    Colorimetry.Illuminant.Standard
+--    Colorimetry.Illuminant.NonStandard
+--    Colorimetry.Monitor
+--    Colorimetry.Observer
+--    Colorimetry.Observer.TwoDegree.CIE_1931
+--    Colorimetry.Observer.TwoDegree.JuddVos_1978
+--    Colorimetry.Observer.TenDegree.CIE_1964
+--    Colorimetry.Observer.TenDegree.StockmanSharpe_2000
+--    Colorimetry.Observer.TenDegree.StockmanJäglePirzerSharpe_2008
+--    Colorimetry.Spectrum.Class
+--    Colorimetry.Spectrum.RGB
+--    Colorimetry.Spectrum.XYZ
+--    Photometry.Photopic
+--    Photometry.Scotopic
+--
   other-modules:
     Paths_colorimetry
 
