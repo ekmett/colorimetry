@@ -1,0 +1,56 @@
+name:          colorimetry
+category:      Graphics
+version:       0.1
+license:       BSD3
+cabal-version: >= 1.6
+license-file:  LICENSE
+author:        Edward A. Kmett
+maintainer:    Edward A. Kmett <ekmett@gmail.com>
+stability:     provisional
+homepage:      http://github.com/ekmett/colorimetry
+copyright:     (C) 2012-2013 Edward A. Kmett
+synopsis:      Colorimetric illuminants, working spaces, and observer models
+description:   Colorimetric illuminants, working spaces, and observer models
+build-type:    Simple
+
+data-dir:      data
+data-files:    monitor/working-space.rgb
+               illuminant/*.1nm,
+               illuminant/*.5nm,
+               observer/*.1nm,
+               observer/*.5nm
+
+source-repository head
+  type: git
+  location: git://github.com/ekmett/nut.git
+
+library
+  build-depends:
+    base                 >= 4 && < 5,
+    containers           >= 0.3.0.0 && < 0.5,
+    unordered-containers >= 0.1.4.6 && < 0.2,
+    vector               >= 0.9.1 && < 0.10,
+    ghc-prim
+
+  exposed-modules:
+    Data.Colorimetry.Illuminant
+    Data.Colorimetry.Illuminant.BlackBody
+    Data.Colorimetry.Illuminant.Standard
+    Data.Colorimetry.Illuminant.NonStandard
+    Data.Colorimetry.Monitor
+    Data.Colorimetry.Observer
+    Data.Colorimetry.Observer.TwoDegree.CIE_1931
+    Data.Colorimetry.Observer.TwoDegree.JuddVos_1978
+    Data.Colorimetry.Observer.TenDegree.CIE_1964
+    Data.Colorimetry.Observer.TenDegree.StockmanSharpe_2000
+    Data.Colorimetry.Observer.TenDegree.StockmanJäglePirzerSharpe_2008
+    Data.Colorimetry.Spectrum.Class
+    Data.Colorimetry.Spectrum.RGB
+    Data.Colorimetry.Spectrum.XYZ
+    Data.Photometry.Photopic
+    Data.Photometry.Scotopic
+
+  other-modules:
+    Paths_colorimetry
+
+  ghc-options: -Wall
